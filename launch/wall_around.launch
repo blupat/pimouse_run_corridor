@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find pimouse_ros)/launch/pimouse.launch" />
+	<rosparam command="load" file="$(find pimouse_run_corridor)/run_corridor.yaml" />
+	<node pkg="pimouse_run_corridor" name="wall_around" type="wall_around.py" required="true" />
+</launch>
